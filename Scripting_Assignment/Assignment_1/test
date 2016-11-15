@@ -1,0 +1,5 @@
+#!/bin/bash
+mkdir timestamp
+cd /
+cd tmp
+mv test ~/timestamp

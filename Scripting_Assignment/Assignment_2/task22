@@ -1,0 +1,13 @@
+#!/bin/bash
+directory=$1
+rename=$2
+ls -RlSr $directory >/home/amit/directory_path.txt
+echo "file sorted according to theie size"
+find $directory -type f -printf "%s\t%f \n" | sort >file_name.txt
+#sort -k1,1nr -k2,2 file_name.txt>file_name_second.txt
+sort -n file_name.txt
+awk -F' ' '{ if($5==0) {print $9} }' directory_path.txt>/home/amit/file_size.txt
+echo "empty files"
+awk '{print $1}' file_size.txt
+find $directory -type f -size 0 -exec rm -i {} \;
+[ -f "$directory/$rename" ] && mv "$directory/$rename" razorthink_$(echo "$directory" | sed -r 's/[/]+/-/g')

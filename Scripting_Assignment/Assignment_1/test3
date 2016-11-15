@@ -1,0 +1,3 @@
+#!/bin/bash
+ps -ef>PID
+awk '{print $2}' PID >pid1

@@ -1,0 +1,15 @@
+#!/bin/bash
+date=$(date +%Y%m%d%H%M%S)
+mkdir $date
+input=$1
+while IFS= read -r var
+do
+#echo $var 
+[ -d $var ] && cp -rp $var $date
+#[ -d $var ] && touch $var 
+done < "$input"
+tar cvfz backup.tar $date
+#00 0-24 * * * ./task21
+#date=$(date +%Y%m%d%H%M%S)
+#mkdir $date
+#[ -d ~/etc/hosts ] && ln -s ~/etc/hosts amitkumar25
