@@ -1,0 +1,28 @@
+Task 1 : Merge “Branch 2” with “Master” and resolve conflicts if any using a pull         request
+Steps 1 : git branch(shows branch2)
+          2 : git checkout master   
+          3 : git merge branch2(shows conflict in Scene 3.txt)
+          4 : resolved conflict
+          5 : add, commit and pushed it to master
+
+Task 2 : In “Branch 3”, Revert back your code to “Scene 3 Good Commit” commit.
+Steps 1 : git checkout branch3 (moved to branch3)
+          2 : copied the commit id of particular commit from website
+          3 : git checkout aa79262f8cd727df6a1f77469ce8a7f2d50180e7 
+        Scene 3.txt
+          4 : add, commit and pushed it to branch 3
+
+Task 3 : Create a new branch ‘Branch4’ containing all the files of “Master”
+Steps 1 : git checkout -b Branch4
+          2 : git push origin Branch4
+
+Task 4 : Create a new file called ‘Bad File’ in Branch4 and commit it locally. Also add few files to git ignore and commit the changes.
+Steps 1 : git checkout Branch4
+          2 : gedit "Bad File",wrote some lines
+          3 : add, commit locally
+          4 : gedit .gitignore(*.txt)
+          5 : add, commit locally
+
+Task 5 :  revert “Bad File” commit and push other changes if any
+Steps 1 : git reset --hard HEAD~1
+          2 : git push origin Branch4

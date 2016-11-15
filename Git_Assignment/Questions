@@ -1,0 +1,14 @@
+Fork GIT repository from the following GIT TEST REPO URL and do the following:
+
+Merge “Branch 2” with “Master” and resolve conflicts if any using a pull request.
+
+In “Branch 3”, Revert back your code to “Scene 3 Good Commit” commit.
+
+Create a new branch ‘Branch4’ containing all the files of “Master”.
+
+Create a new file called ‘Bad File’ in Branch4 and commit it locally. Also add few files to git ignore and commit the changes.
+
+Now revert “Bad File” commit and push other changes if any.
+ 
+GIT Test Repo URL: https://github.com/arunpratheep92/testRepo
+
